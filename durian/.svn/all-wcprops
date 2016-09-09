@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 29
+/svn/!svn/ver/112/apps/durian
+END
+pom.xml
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/107/apps/durian/pom.xml
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/107/apps/durian/.classpath
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/107/apps/durian/.project
+END
+durian package dev.launch
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/107/apps/durian/durian%20package%20dev.launch
+END
+durian package.launch
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/107/apps/durian/durian%20package.launch
+END

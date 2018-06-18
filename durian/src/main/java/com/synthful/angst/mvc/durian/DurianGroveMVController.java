@@ -14,15 +14,16 @@ public class DurianGroveMVController
 extends AAngsta{
 
 	/**
+	 * Response to Hello.jsp
 	 * 
 	 * @param model
 	 * @return
 	 * @throws Exception
 	 * 
 	 * Browser url:
-	 *  http://{hostname}:{port}/{context}/v/h2g2j
+	 *  http://{hostname}:{port}/{context}/duriangrove/h2g2j
 	 * e.g.,
-	 *  http://localhost:8080/durian/v/h2g2j
+	 *  http://localhost:8080/durian/v/duriangrove/h2g2j?who=Annie&what=Waker&when=now
 	 */
     @RequestMapping(value = "/h2g2j", method = {RequestMethod.GET,RequestMethod.POST})
 	public String anotherHandleRequest(ModelMap model,

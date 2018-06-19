@@ -1,22 +1,30 @@
 package com.synthful.angst.mvc.durian;
 
+import java.util.Map;
+
+import javax.annotation.Resource;
 import javax.inject.Inject;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import com.synthful.angst.app.durian.Wally;
 import com.synthful.angst.common.AAngsta;
+import com.synthful.angst.model.Address;
 
 @Controller
 public class DurianMVController
 extends AAngsta{
 
-	private Wally wally;
+    final static public String SEASON = "Spring";
 
+    private Wally wally;
+
+    @Resource (name="zipMap")
+    private Map<Integer, Address> zipMap;
+    
 	@Inject
 	public void setWally(Wally wally){
 		this.wally = wally;
@@ -35,9 +43,18 @@ extends AAngsta{
 	 *  http://localhost:8080/durian/v/h1
 	 */
     @RequestMapping(value = "/h1", method = RequestMethod.GET)
-	public String handleRequestJoyfully()			
+	public String handleRequestJoyfully(ModelMap model)			
 	throws Exception {
+        
+        //  <option value="%i">%5d</option>
+        StringBuffer sbuf = new StringBuffer();
+        zipMap.keySet().forEach((key)->{
+            String opt = String.format("<option value=\"%d\">%05d</option>\n", key, key);
+            sbuf.append(opt);
+        });
 		
+        model.addAttribute("zippers", sbuf.toString());
+
 		logger.info("handleRequestJoyfully");
 		return "Hello";
 	}

@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.synthful.angst.common.AAngsta;
 import com.synthful.angst.common.AngstaProperties;
+import com.synthful.angst.model.Address;
 
 @Service
 public class AppInfo

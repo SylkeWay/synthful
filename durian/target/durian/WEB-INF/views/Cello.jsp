@@ -8,6 +8,6 @@
 </head>
 <body>
 <h2>Cello Tremello</h2>
-${who} ${why}
+${who} ${why} in ${season}
 </body>
 </html>

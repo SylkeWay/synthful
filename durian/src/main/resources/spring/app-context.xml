@@ -3,12 +3,14 @@
   xmlns="http://www.springframework.org/schema/beans"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:context="http://www.springframework.org/schema/context"
+  
   xsi:schemaLocation="
         http://www.springframework.org/schema/beans 
         http://www.springframework.org/schema/beans/spring-beans.xsd
         
         http://www.springframework.org/schema/context
-        http://www.springframework.org/schema/context/spring-context.xsd">
+        http://www.springframework.org/schema/context/spring-context.xsd
+        ">
 
   <bean id="greeting" class="java.lang.String">
     <constructor-arg type="java.lang.String"
@@ -27,12 +29,12 @@
   </bean>
 
   <bean id="hampdenME"
-    class="com.synthful.angst.app.durian.Address">
-    <constructor-arg type="java.lang.String" name="street" value="123 Main St " />
+    class="com.synthful.angst.model.Address">
+    <constructor-arg type="java.lang.String" name="street" value="123 Main St" />
     <constructor-arg type="java.lang.String" name="city" value="Hampden" />
     <constructor-arg type="int" name="zip" value="4444" />
   </bean>
-
+  
   <context:component-scan
     base-package="com.synthful.angst.app.durian" />
 

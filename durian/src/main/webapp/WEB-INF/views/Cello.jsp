@@ -8,6 +8,6 @@
 </head>
 <body>
 <h2>Cello Tremello</h2>
-${who} ${why}
+${who} lives in ${where} in ${what} .
 </body>
 </html>

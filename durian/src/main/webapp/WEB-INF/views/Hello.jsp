@@ -16,11 +16,21 @@
 <td><input readonly="readonly" name="who" value="Annie Walker"></td>
 </tr>
 <tr>
-<td>What</td>
-<td><input name="what" value="MIA agent"></td>
-<td> <br>
-</td>
+<td colspan="2">Where</td>
 </tr>
+
+<tr>
+<td>Street</td>
+<td><input name="street" value="123 Main St"></td>
+</tr>
+
+<tr>
+<td>Zip</td>
+<td><select name="zip" value="12345">
+${zippers}
+</select></td>
+</tr>
+
 <tr>
 <td>When</td>
 <td><input name="when" value="12/12/1212 12:12:12"><br>

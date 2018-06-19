@@ -32,11 +32,6 @@ ${zippers}
 </tr>
 
 <tr>
-<td>When</td>
-<td><input name="when" value="12/12/1212 12:12:12"><br>
-</td>
-</tr>
-<tr>
 <td><input value="Post it" name="postit" type="submit"></td>
 <td> <br>
 </td>

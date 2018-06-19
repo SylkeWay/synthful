@@ -39,8 +39,7 @@ extends AAngsta{
 	public String anotherHandleRequest(ModelMap model,
 			@RequestParam("who") String who,
 			@RequestParam("street") String street,
-            @RequestParam("zip") int zip,			
-			@RequestParam("when") String when)			
+            @RequestParam("zip") int zip)			
 	throws Exception {
         
         Address addr = zipMap.get(zip);
@@ -52,7 +51,7 @@ extends AAngsta{
         model.addAttribute("where", where );
         model.addAttribute("what", season);
 		
-		logger.info("anotherHandleRequest: {},{},{} ", who, where, when);
+		logger.info("anotherHandleRequest: {},{},{} ", who, where, season);
 		return "Cello";
 	}
 }

@@ -15,47 +15,46 @@ import com.synthful.angst.common.AAngsta;
 import com.synthful.angst.model.Address;
 
 @Controller
-public class DurianMVController
-extends AAngsta{
+public class DurianMVController extends AAngsta {
 
     final static public String SEASON = "Spring";
 
     private Wally wally;
 
-    @Resource (name="zipMap")
+    @Resource(name = "zipMap")
     private Map<Integer, Address> zipMap;
-    
-	@Inject
-	public void setWally(Wally wally){
-		this.wally = wally;
-		logger.info("mvc wally={}", wally);		
-	}
-	
-	/**
-	 * 
-	 * @param model
-	 * @return
-	 * @throws Exception
-	 * 
-	 * Browser url:
-	 *  http://{hostname}:{port}/{context}/v/h1
-	 * e.g.,
-	 *  http://localhost:8080/durian/v/h1
-	 */
+
+    @Inject
+    public void setWally(Wally wally) {
+        this.wally = wally;
+        logger.info("mvc wally={}", wally);
+    }
+
+    /**
+     * 
+     * @param model
+     * @return
+     * @throws Exception
+     * 
+     *             Browser url: http://{hostname}:{port}/{context}/v/h1 e.g.,
+     *             http://localhost:8080/durian/v/h1
+     */
     @RequestMapping(value = "/h1", method = RequestMethod.GET)
-	public String handleRequestJoyfully(ModelMap model)			
-	throws Exception {
-        
-        //  <option value="%i">%5d</option>
-        StringBuffer sbuf = new StringBuffer();
-        zipMap.keySet().forEach((key)->{
+    public String handleRequestJoyfully(ModelMap model) throws Exception {
+
+        StringBuilder selectOpts = generateSelectOptions(zipMap);
+        model.addAttribute("zippers", selectOpts.toString());
+
+        logger.info("handleRequestJoyfully");
+        return "Hello";
+    }
+
+    static private StringBuilder generateSelectOptions(Map<Integer, Address> zipMap) {
+        StringBuilder sbuf = new StringBuilder();
+        zipMap.keySet().forEach((key) -> {
             String opt = String.format("<option value=\"%d\">%05d</option>\n", key, key);
             sbuf.append(opt);
         });
-		
-        model.addAttribute("zippers", sbuf.toString());
-
-		logger.info("handleRequestJoyfully");
-		return "Hello";
-	}
+        return sbuf;
+    }
 }

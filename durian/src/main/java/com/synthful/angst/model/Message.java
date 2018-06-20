@@ -1,4 +1,4 @@
-package com.synthful.angst.app.durian;
+package com.synthful.angst.model;
 
 public class Message {
 	final private String message;

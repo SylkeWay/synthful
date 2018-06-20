@@ -7,29 +7,25 @@ import org.springframework.stereotype.Service;
 import com.synthful.angst.common.AAngsta;
 import com.synthful.angst.common.AngstaProperties;
 import com.synthful.angst.model.Address;
+import com.synthful.angst.model.Branch;
+import com.synthful.angst.model.Message;
 
 @Service
 public class AppInfo
 extends AAngsta{
     
 	private Message message;
-	private AngstaProperties aProperties;
 	private String wName;
 	private int wValue;
 	
-	@Inject
-	private String greeting;
+	@Inject private Branch hampdenBranch;
+	@Inject private String greeting;
+	@Inject Address hampdenME;
 	
 	@Inject
 	public void setMessage (Message message) {
 		this.message = message;
 		logger.info("message={}", message);
-	}
-	
-	@Inject
-	public void setAProperties(AngstaProperties aProperties) {
-		this.aProperties = aProperties;
-		logger.info("aProperties={}", aProperties);
 	}
 	
 	@Inject
@@ -39,8 +35,9 @@ extends AAngsta{
 		logger.info("wally={}", wally);		
 	}
 	
-	@Inject Address hampdenME;
-	
+	// Null injection values because injection is possible only after instantiation,
+	// which is when constructor completes
 	AppInfo(){
+	    logger.info("message:{} Location={} {}", message, hampdenBranch, hampdenME);
 	}
 }

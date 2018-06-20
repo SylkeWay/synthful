@@ -17,15 +17,15 @@
       value="#### Hello Bellow ####" />
   </bean>
 
-  <bean id="message" class="com.synthful.angst.app.durian.Message">
+  <bean id="message" class="com.synthful.angst.model.Message">
     <constructor-arg type="java.lang.String"
       value="Ayam den lapeh" />
   </bean>
-
-  <bean id="aProperties"
-    class="com.synthful.angst.common.AngstaProperties">
-    <property name="propertiesTextFile"
-      value="/properties/a.properties" />
+  
+  <bean id="hampdenBranch" class="com.synthful.angst.model.Branch">
+    <property name="manager" value="Sammy Davis"/>
+    <property name="id" value="666"/>
+    <property name="location" ref="hampdenME"/>
   </bean>
 
   <bean id="hampdenME"

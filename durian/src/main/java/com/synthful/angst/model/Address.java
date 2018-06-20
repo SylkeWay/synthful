@@ -29,7 +29,7 @@ extends AAngsta {
     }
     
     static public enum State{
-        MA (Arrays.asList(01001, 01004, 01103)),
+        MA (Arrays.asList( 1001, 1004,  1103)),
         ME (Arrays.asList( 3910, 4091,  4100,  4112, 4444)),
         MO (Arrays.asList(63440, 63572)),
         OR (Arrays.asList(97101, 97288, 97311, 97425)),

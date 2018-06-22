@@ -25,7 +25,6 @@ public class DurianControllerAsView extends AAngsta {
     
     @Value(value = "${plant.fruit.type}")
     private String plantFruitType;
-
     
     @Inject private String view1Html;
     
@@ -46,7 +45,4 @@ public class DurianControllerAsView extends AAngsta {
         logger.info("plantFruitType:{}", plantFruitType);
         return view1Html;
     }
-    
-    
-
 }

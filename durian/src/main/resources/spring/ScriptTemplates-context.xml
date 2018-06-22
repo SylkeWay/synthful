@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+  xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+
+  xsi:schemaLocation="
+    http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    ">
+  
+  <bean id="inquireFruitSQL" class="java.lang.String" scope="prototype">
+    <constructor-arg><value><![CDATA[
+      SELECT f.name, f.genus
+      FROM fruits f
+      WHERE f.type = '${fruit.type}'
+    ]]></value></constructor-arg>
+  </bean>
+
+  <bean id="fruitySASMacro" class="java.lang.String" scope="prototype">
+    <constructor-arg><value><![CDATA[
+    %macro durian;
+      %let fruitname = ${fruit.name};
+      
+      DATA ${fruit.name};
+        INFILE '${fruit.data.filepath}';
+        INPUT Name $ 1-15 Genus $ Family $ 
+      RUN;
+      
+      PROC SORT DATA = ${fruit.name};
+      BY ${fruit.sortBy};
+      
+      PROC PRINT DATA = ${fruit.name} NOOBS;
+        TITLE &fruitname;
+        VAR Name Genus Family;
+      RUN;
+    %mend durian;
+    ]]></value></constructor-arg>
+  </bean>
+
+</beans>

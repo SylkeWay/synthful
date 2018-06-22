@@ -30,7 +30,7 @@ public class DurianGroveMVController extends AAngsta {
      * @return
      * @throws Exception
      * 
-     *             Browser url: http://{hostname}:{port}/{context}/duriangrove/h2g2j
+     *             Browser url: http://{hostname}:{port}/{context}/v/duriangrove/h2g2j
      *             e.g.,
      *             http://localhost:8080/durian/v/duriangrove/h2g2j?who=Annie&what=Waker&when=now
      */

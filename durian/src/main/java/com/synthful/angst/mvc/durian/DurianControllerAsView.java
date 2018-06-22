@@ -1,8 +1,5 @@
 package com.synthful.angst.mvc.durian;
 
-import java.util.Properties;
-
-import javax.annotation.Resource;
 import javax.inject.Inject;
 
 import org.springframework.beans.factory.annotation.Value;

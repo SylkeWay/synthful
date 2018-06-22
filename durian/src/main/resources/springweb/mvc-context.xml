@@ -25,16 +25,13 @@
       <value>.jsp</value>
     </property>
   </bean>
-  
-  <bean id="view1Html" class="java.lang.String">
-    <constructor-arg><value><![CDATA[
-<html>
-Hello
-</html>
-    ]]></value></constructor-arg>
+    
+  <bean
+    class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    <property name="location">
+      <value>classpath:properties/b.properties</value>
+    </property>
   </bean>
-  
-  <util:properties id="broperties" location="classpath:/properties/b.properties"/>
 
   <util:constant id="season"
     static-field="com.synthful.angst.mvc.durian.DurianMVController.SEASON" />

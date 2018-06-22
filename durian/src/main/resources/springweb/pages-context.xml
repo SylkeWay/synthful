@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+  xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:util="http://www.springframework.org/schema/util"
+
+  xsi:schemaLocation="
+    http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+            
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd
+    ">
+    
+  
+  <bean id="view1Html" class="java.lang.String" scope="prototype">
+    <constructor-arg><value><![CDATA[
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html template="true"><head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+  <title>Durian</title>
+</head><body>
+<table style="text-align: left;" border="1" cellpadding="5" cellspacing="2">
+  <tbody style="vertical-align: top;">
+    <tr>
+      <td>plant.fruit.name<br/><br/></td>
+      <td>${plant.fruit.name}</td>
+    </tr>
+    <tr>
+      <td>plant.fruit.type</td>
+      <td>${plant.fruit.type}</td>
+    </tr>
+    <tr>
+      <td>plant.fruit.etymology.language</td>
+      <td>${plant.fruit.etymology.language}</td>
+    </tr>
+    <tr>
+      <td>plant.fruit.etymology.meaning</td>
+      <td>${plant.fruit.etymology.meaning}</td>
+    </tr>
+    <tr>
+      <td>plant.genus</td>
+      <td>${plant.genus}</td>
+    </tr>
+    <tr>
+      <td>plant.tribe</td>
+      <td>${plant.tribe}</td>
+    </tr>
+    <tr>
+      <td>plant.subfamily</td>
+      <td>${plant.subfamily}</td>
+    </tr>
+    <tr>
+      <td>plant.order</td>
+      <td>${plant.order}</td>
+    </tr>
+  </tbody>
+</table>
+</body></html>
+    ]]></value></constructor-arg>
+  </bean>
+
+</beans>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html><head>
+  <meta content="text/html;" charset="utf-8" http-equiv="content-type">
+  <title>paradigm</title>
+
+
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="1.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+  <script src="1.js"></script>
+  
+</head><body onload="onload()">
+<br><br>
+
+<span>
+
+<table cellpadding="3" cellspacing="0">
+
+<thead>
+<tr class="t0">
+<th ></th>
+<th class="th0 cy3" >נִפְעַל</th>
+<th class="th0 cy2" >פוּעֵל</td>
+<th class="th0 cy1" >הוּפְעִיל</td>
+<th class="th0 cz0" >הִתְפַעֵל</td>
+<th class="th0 cx1" >הִיפְעִיל</td>
+<th class="th0 cx2" >פִיעֵל</td>
+<th class="th0 cx3" >פָעַל</td>
+</tr>
+<tr class="t0">
+<th class="th1">שׁוֹרֶש</td>
+<td class="td2 cy3">גדר</td>
+<td class="td2 cy2">גדר</td>
+<td class="td2 cy1">גדר</td>
+<td class="td2 cz0">גדר</td>
+<td class="td2 cx1">גדר</td>
+<td class="td2 cx2">גדר</td>
+<td class="td2 cx3">גדר</td>
+</tr>
+</thead>
+
+<tbody class="tb1" id="menorah">
+<tr>
+<th class="th1" >הֹוֶה Present</th>
+</tr>
+<tr class="t11">
+<th class="th1" >אַנִי&nbsp;אֵתָּה&nbsp;הוּא</th>
+<td class="td2 cy3" >נִגְדָר</td>
+<td class="td2 cy2" >מְגוּדָּר</td>
+<td class="td2 cy1" >מוּגְדָר</td>
+<td class="td2 cz0" >מִתְגַּדֵּר</td>
+<td class="td2 cx1" >מַגְדִיר</td>
+<td class="td2 cx2" >מְגַדֵּר</td>
+<td class="td2 cx3" >גוֹדֵר</td>
+</tr>
+<tr class="t12">
+<th class="th2" >אַנִי אַתְּ הִיא</th>
+<td class="td2 cy3">נִגְדֶרֶת</td>
+<td class="td2 cy2">מְגוּדֶּרֶת</td>
+<td class="td2 cy1">מוּגְדֶרֶת</td>
+<td class="td2 cz0">מִתְגַּדֶּרֶת</td>
+<td class="td2 cx1">מַגְדִירָה</td>
+<td class="td2 cx2">מְגַדֶּרֶת</td>
+<td class="td2 cx3">גוֹדֶרֶת</td>
+</tr>
+<tr class="t11">
+<th class="th1" >אַנַחְנוּ אַתֶּם הֵם</th>
+<td class="td2 cy3">נִגְדָרִים</td>
+<td class="td2 cy2">מְגוּדָּרִים</td>
+<td class="td2 cy1">מוּגְדָרִים</td>
+<td class="td2 cz0">מִתְגַּדְּרִים</td>
+<td class="td2 cx1">מַגְדִירִים</td>
+<td class="td2 cx2">מְגַדּרִים</td>
+<td class="td2 cx3">גוֹדְרִים</td>
+</tr>
+<tr class="t12">
+<th class="th2" >אַנַחְנוּ אַתֶן הֵן</th>
+<td class="td2 cy3">נִגְדָרוֹת</td>
+<td class="td2 cy2">מְגוּדָּרוֹת</td>
+<td class="td2 cy1">מוּגְדָרוֹת</td>
+<td class="td2 cz0">מִתְגַּדְּרוֹת</td>
+<td class="td2 cx1">מַגְדִירוֹת</td>
+<td class="td2 cx2">מְגַדְּרוֹת</td>
+<td class="td2 cx3">גוֹדְרוֹת</td>
+</tr>
+<tr>
+<th>&nbsp;</th>
+</tr>
+<tr>
+<th class="th1" > עָבָר Past</th>
+</tr>
+<tr class="t21">
+<th class="th1" >אַנִי</th>
+<td class="td2 cy3">נִגְדַרְתִּי</td>
+<td class="td2 cy2">גּוּדַּרְתִּי</td>
+<td class="td2 cy1">הוּגְדַרְתִּי</td>
+<td class="td2 cz0">הִתְגַּדַּרְתִּי</td>
+<td class="td2 cx1">הִגְדַרְתִּי</td>
+<td class="td2 cx2">גִּידַּרְתִּי</td>
+<td class="td2 cx3">גָדַרְתִּי</td>
+</tr>
+<tr class="t22">
+<th class="th2" >אֵתָּה</th>
+<td class="td2 cy3">נִגְדַרְתָּ</td>
+<td class="td2 cy2">גּוּדַּרְתָּ</td>
+<td class="td2 cy1">הוּגְדַרְתָּ</td>
+<td class="td2 cz0">הִתְגַּדַּרְתָּ</td>
+<td class="td2 cx1">הִגְדַרְתָּ</td>
+<td class="td2 cx2">גִּידַּרְתָּ</td>
+<td class="td2 cx3">גָדַרְתָּ</td>
+</tr>
+<tr class="t21">
+<th class="th1" >אַתְּ</th>
+<td class="td2 cy3">נִגְדַרְתְּ</td>
+<td class="td2 cy2">גּוּדַּרְתְּ</td>
+<td class="td2 cy1">הוּגְדַרְתְּ</td>
+<td class="td2 cz0">הִתְגַּדַּרְתְּ</td>
+<td class="td2 cx1">הִגְדַרְתְּ</td>
+<td class="td2 cx2">גִּידַּרְתְּ</td>
+<td class="td2 cx3">גָדַרְתְּ</td>
+</tr>
+<tr class="t22">
+<th class="th2" >הוּא</th>
+<td class="td2 cy3">נִגְדַר</td>
+<td class="td2 cy2">גּוּדַּר</td>
+<td class="td2 cy1">הוּגְדַר</td>
+<td class="td2 cz0">הִתְגַּדֵּר</td>
+<td class="td2 cx1">הִגְדִיר</td>
+<td class="td2 cx2">גִּידֵּר</td>
+<td class="td2 cx3">גָדַר</td>
+</tr>
+<tr class="t21">
+<th class="th1" >הִיא</th>
+<td class="td2 cy3">נִגְדְרָה</td>
+<td class="td2 cy2">גּוּדְּרָה</td>
+<td class="td2 cy1">הוּגְדְרָה</td>
+<td class="td2 cz0">הִתְגַּדְּרָה</td>
+<td class="td2 cx1">הִגְדִירָה</td>
+<td class="td2 cx2">גִּידְּרָה</td>
+<td class="td2 cx3">גָֽדְרָה</td>
+</tr>
+<tr><th/></tr>
+<tr class="t21">
+<th class="th1" >אַנַחְנוּ</th>
+<td class="td2 cy3">נִגְדַרְנוּ</td>
+<td class="td2 cy2">גּוּדַּרְנוּ</td>
+<td class="td2 cy1">הוּגְדַרּוּ</td>
+<td class="td2 cz0">הִתְגַּדַּרְנוּ</td>
+<td class="td2 cx1">הִגְדַרּוּ</td>
+<td class="td2 cx2">גִּידַּרְנוּ</td>
+<td class="td2 cx3">גָדַרְנוּ</td>
+</tr>
+<tr class="t22">
+<th class="th2" >אַתֶּם</th>
+<td class="td2 cy3">נִגְדַרְתֶּם</td>
+<td class="td2 cy2">גּוּדַּרְתֶּם</td>
+<td class="td2 cy1">הוּגְדַרְתֶּם</td>
+<td class="td2 cz0">הִתְגַּדַּרְתֶּם</td>
+<td class="td2 cx1">הִגְדַרְתֶּם</td>
+<td class="td2 cx2">גִּידַּרְתֶּם</td>
+<td class="td2 cx3">גְדַרְתֶּם</td>
+</tr>
+<tr class="t21">
+<th class="th1" >אַתֶן</th>
+<td class="td2 cy3">נִגְדַרְתֶּן</td>
+<td class="td2 cy2">גּוּדַּרְתֶּן</td>
+<td class="td2 cy1">הוּגְדַרְתֶּן</td>
+<td class="td2 cz0">הִתְגַּדַּרְתֶּן</td>
+<td class="td2 cx1">הִגְדַרְתֶּן</td>
+<td class="td2 cx2">גִּידַּרְתֶּן</td>
+<td class="td2 cx3">גְדַרְתֶּן</td>
+</tr>
+<tr class="t22">
+<th class="th2" >הֵם הֵן</th>
+<td class="td2 cy3">נִגְדְרוּ</td>
+<td class="td2 cy2">גּוּדְּרוּ</td>
+<td class="td2 cy1">הוּגְדְרוּ</td>
+<td class="td2 cz0">הִתְגַּדְּרוּ</td>
+<td class="td2 cx1">הִגְדִירוּ</td>
+<td class="td2 cx2">גִּידְּרוּ</td>
+<td class="td2 cx3">גָֽדְרוּ</td>
+</tr>
+<tr>
+<th>&nbsp;</th>
+<tr>
+<th class="th1" > עָתִיד Future</th>
+</tr>
+<tr class="t31">
+<th class="th1" >אַנִי</th>
+<td class="td2 cy3">אֶגָּדֵר</td>
+<td class="td2 cy2">אֲגוּדַּר</td>
+<td class="td2 cy1">אוּגְדַר</td>
+<td class="td2 cz0">אֶתְגַּדֵּר</td>
+<td class="td2 cx1">אַגְדִיר</td>
+<td class="td2 cx2">אֲגַדֵּר</td>
+<td class="td2 cx3">אֶגְדוֹר</td>
+</tr>
+<tr class="t32">
+<th class="th2" >אֵתָּה</th>
+<td class="td2 cy3">תִּיגָּדֵר</td>
+<td class="td2 cy2">תְּגוּדַּר</td>
+<td class="td2 cy1">תּוּגְדַר</td>
+<td class="td2 cz0">תִּתְגַּדֵּר</td>
+<td class="td2 cx1">תַּגְדִיר</td>
+<td class="td2 cx2">תְּגַדֵּר</td>
+<td class="td2 cx3">תִּגְדוֹר</td>
+</tr>
+<tr class="t31">
+<th class="th1" >אֵתְּ</th>
+<td class="td2 cy3">תִּיגָּדְרִי</td>
+<td class="td2 cy2">תְּגוּדְּרִי</td>
+<td class="td2 cy1">תּוּגְדְרִי</td>
+<td class="td2 cz0">תִּתְגַּדְּרִי</td>
+<td class="td2 cx1">תַּגְדִירִי</td>
+<td class="td2 cx2">תְּגַדְּרִי</td>
+<td class="td2 cx3">תִּגְדְרִי</td>
+</tr>
+<tr class="t32">
+<th class="th2" >הוּא</th>
+<td class="td2 cy3">יִיגָּדֵר</td>
+<td class="td2 cy2">יְגוּדַּר</td>
+<td class="td2 cy1">יוּגְדַר</td>
+<td class="td2 cz0">יִתְגַּדֵּר</td>
+<td class="td2 cx1">יַגְדִיר</td>
+<td class="td2 cx2">יְגַדֵּר</td>
+<td class="td2 cx3">יִגְדוֹר</td>
+</tr>
+<tr class="t31">
+<th class="th1" >הִיא</th>
+<td class="td2 cy3">תִּיגָּדֵר</td>
+<td class="td2 cy2">תְּגוּדַּר</td>
+<td class="td2 cy1">תּוּגְדַר</td>
+<td class="td2 cz0">תִּתְגַּדֵּר</td>
+<td class="td2 cx1">תַּגְדִיר</td>
+<td class="td2 cx2">תְּגַדֵּר</td>
+<td class="td2 cx3">תִּגְדוֹר</td>
+</tr>
+<tr><th/></tr>
+<tr class="t31">
+<th class="th1" >אַנַחְנוּ</th>
+<td class="td2 cy3">נִיגָּדֵר</td>
+<td class="td2 cy2">נְגוּדַּר</td>
+<td class="td2 cy1">נוּגְדַר</td>
+<td class="td2 cz0">נִתְגַּדֵּר</td>
+<td class="td2 cx1">נַגְדִיר</td>
+<td class="td2 cx2">נְגַדֵּר</td>
+<td class="td2 cx3">נִגְדוֹר</td>
+</tr>
+<tr class="t32">
+<th class="th2" >אַתֶּם</th>
+<td class="td2 cy3">תִּיגָּדְרוּ</td>
+<td class="td2 cy2">תְּגוּדְּרוּ</td>
+<td class="td2 cy1">תּוּגְדְרוּ</td>
+<td class="td2 cz0">תִּתְגַּדְּרוּ</td>
+<td class="td2 cx1">תַּגְדִירוּ</td>
+<td class="td2 cx2">תְּגַדְּרוּ</td>
+<td class="td2 cx3">תִּגְדְרוּ</td>
+</tr>
+<tr class="t31">
+<th class="th1" >אַתֶן</th>
+<td class="td2 cy3">תְּגַדֵּרְנָה</td>
+<td class="td2 cy2">תְּגוּדַּרְנָה</td>
+<td class="td2 cy1">תּוּגְדַרָּה</td>
+<td class="td2 cz0">תִּתְגַּדֵּרְנָה</td>
+<td class="td2 cx1">תַּגְדֶירָה</td>
+<td class="td2 cx2">תִּגְדַּרְנָה</td>
+<td class="td2 cx3">תִּגְדוֹרנָה</td>
+</tr>
+<tr class="t32">
+<th class="th2" >הֵם הֵן</th>
+<td class="td2 cy3">יִיגָּדְרוּ</td>
+<td class="td2 cy2">יְגוּדְּרוּ</td>
+<td class="td2 cy1">יוּגְדְרוּ</td>
+<td class="td2 cz0">יִתְגַּדְּרוּ</td>
+<td class="td2 cx1">יַגְדִירוּ</td>
+<td class="td2 cx2">יְגַדְּרוּ</td>
+<td class="td2 cx3">יִגְדְרוּ</td>
+</tr>
+<tr class="t31">
+<th class="th1" >**הֵן</th>
+<td class="td2 cy3">תְּגַדֵּרְנָה</td>
+<td class="td2 cy2">תְּגוּדַּרְנָה</td>
+<td class="td2 cy1">תּוּגְדַרָּה</td>
+<td class="td2 cz0">תִּתְגַּדֵּרְנָה</td>
+<td class="td2 cx1">תַּגְדֶירָה</td>
+<td class="td2 cx2">תִּגְדַּרְנָה</td>
+<td class="td2 cx3">תִּגְדוֹרנָה</td>
+</tr>
+<tr><th>&nbsp;</th><tr>
+<th class="th1" > צוּוּי <br/>Imperative</th>
+</tr>
+<tr class="t41">
+<th class="th1" >אֵתָּה</th>
+<td class="td2 cy3">הִגָדֵר</td>
+<td/>
+<td/>
+<td class="td2 cz0">הִתְגַדֵר</td>
+<td class="td2 cx1">הַגְדֵר</td>
+<td class="td2 cx2">גַדֵר</td>
+<td class="td2 cx3">גְדֹר</td>
+</tr>
+<tr class="t42">
+<th class="th2" >אֵתְּ</th>
+<td class="td2 cy3">הִגָדְרִי</td>
+<td/>
+<td/>
+<td class="td2 cz0">הִתְגַדְרִי</td>
+<td class="td2 cx1">הַגְדִירִי</td>
+<td class="td2 cx2">גַדְרִי</td>
+<td class="td2 cx3">גִדְרִי</td>
+</tr>
+<tr class="t41">
+<th class="th1" >אַתֶּם</th>
+<td class="td2 cy3">הִגָדְרוּ</td>
+<td/>
+<td/>
+<td class="td2 cz0">הִתְגַדְרוּ</td>
+<td class="td2 cx1">הַגְדִירוּ</td>
+<td class="td2 cx2">גַדְרוּ</td>
+<td class="td2 cx3">גִדְרוּ</td>
+</tr>
+<tr class="t42">
+<th class="th2" >אַתֶן</th>
+<td class="td2 cy3">הִגָדַרְנָה</td>
+<td/>
+<td/>
+<td class="td2 cz0">הִתְגַדֵרְנָה</td>
+<td class="td2 cx1">הַגְדֵרָּה</td>
+<td class="td2 cx2">גַדֵרְנָה</td>
+<td class="td2 cx3">גְדֹרְנָה</td>
+</tr>
+<tr>
+<th>&nbsp;</th>
+<tr>
+<th class="th1" >שמ הפועל <br/>Infinitive</th>
+<td class="td2 cy3">לְהִגֶדַר</td>
+<td/>
+<td/>
+<td class="td2 cz0">לְהִתְגַּדֵּר</td>
+<td class="td2 cx1">לְהַגְדִיר</td>
+<td class="td2 cx2">לְהַגְּדַּר</td>
+<td class="td2 cx3">לִגְדֹר</td>
+</tr>
+<tr>
+<th>&nbsp;</th>
+</tr>
+<tr>
+<th class="th1">English <br/>Equivalent</th>
+<td class="tdx cy3" >Be imprisoned</td>
+<td class="tdx cy2" >Be fenced</td>
+<td class="tdx cy1" >Be enclosed; be placed within fence; be defined</td>
+<td class="tdx cz0" >Place oneself within fence; defences</td>
+<td class="tdx cx1" >Enclose; Place within fence; Define</td>
+<td class="tdx cx2" >Gender</td>
+<td class="tdx cx3" >to Fence</td>
+</tr>
+</tbody>
+</table>
+</span>
+<br>
+
+<br>
+
+</body></html>

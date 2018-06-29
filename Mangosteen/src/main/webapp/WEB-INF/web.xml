@@ -29,6 +29,6 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>CamelServlet</servlet-name>
-    <url-pattern>/fry/*</url-pattern>
+    <url-pattern>/web/*</url-pattern>
   </servlet-mapping>
 </web-app>

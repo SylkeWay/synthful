@@ -25,13 +25,8 @@
       <value>.jsp</value>
     </property>
   </bean>
-    
-  <bean
-    class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-    <property name="location">
-      <value>classpath:properties/b.properties</value>
-    </property>
-  </bean>
+  
+  <context:property-placeholder location="classpath:properties/b.properties"/>
 
   <util:constant id="season"
     static-field="com.synthful.angst.mvc.durian.DurianMVController.SEASON" />

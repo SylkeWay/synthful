@@ -27,6 +27,11 @@
     <constructor-arg type="java.lang.String"
       value="Ayam den lapeh" />
   </bean>
+  <bean id="suffixedMessage" class="com.synthful.angst.model.Message">
+    <constructor-arg type="java.lang.String"
+      value="Ayam den lapeh" />
+    <property name="suffix" value="Burung Tempua mencari sarang"/>
+  </bean>
   
   <bean id="hampdenBranch" class="com.synthful.angst.model.Branch">
     <property name="manager" value="Sammy Davis"/>

@@ -4,17 +4,23 @@ import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.model.rest.RestBindingMode;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
+import org.synthful.websvc.camel.BasicRoute;
 import org.synthful.websvc.restology.model.AliveStatus;
 import org.synthful.websvc.restology.model.Request;
 import org.synthful.websvc.restology.process.Alive;
 import org.synthful.websvc.restology.process.RequestResponse;
 
+/**
+ * 
+ * @author SylkWay
+ * 
+ * Example url:
+ * http://localhost:8080/Mangosteen/web/alive
+ * 
+ *
+ */
 @Service
-public class MainRoute extends RouteBuilder {
-    
-    private interface Constants {
-        String APPLICATION_XML = "application/xml";
-    }
+public class MainRoute extends BasicRoute {
     
 
     @Override
@@ -26,26 +32,29 @@ public class MainRoute extends RouteBuilder {
     
         rest().description("Restive festive")
             .get("/alive").description("alive")
-                .consumes(MediaType.APPLICATION_XML_VALUE).produces(MediaType.APPLICATION_XML_VALUE)
+                .produces(MediaType.APPLICATION_XML_VALUE)
                 .outType(AliveStatus.class)
                 .route()
                     .process(new Alive())
                 .endRest()
-            .get("/verb")
+                
+            .get("/alive/autobind")
+                .outType(AliveStatus.class)
+                .route()
+                    .process(new Alive())
+                .endRest()
+                .bindingMode(RestBindingMode.auto)
+
+            .get("/shoresh")
                 .consumes(MediaType.APPLICATION_XML_VALUE).produces(MediaType.TEXT_HTML_VALUE)
                 .outType(Request.class)
                 .type(Request.class)
                 .route()
                     .process(new RequestResponse())
+                    .log("routeid = " + getRouteId())
                 .endRest()
-
-/*
-        .post("/fried").description("get fried")
-            .consumes(Constants.APPLICATION_XML).produces(Constants.APPLICATION_XML)
-            .type(InDTO.class)
-            .to(newRouteBuilder)
-            .outType(OutDTO.class)
-*/
+                
+                
         ;
     }
 }

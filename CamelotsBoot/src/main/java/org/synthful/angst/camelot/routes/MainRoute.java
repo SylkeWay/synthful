@@ -24,6 +24,7 @@ public class MainRoute extends RouteBuilder {
             .component("servlet")
             .bindingMode(RestBindingMode.xml)
             .dataFormatProperty("prettyPrint", "true")
+            .contextPath("camelot")
         ;
     
         rest("/w").description("Restive festive")

@@ -34,4 +34,6 @@ public class CamelotSpringBootStarter {
 
 }
 
-// http://localhost:8910/camel/w/alive
+// from application.properties
+// http://localhost:8910/camelot/w/alive
+//http://localhost:8910/camelot/w/hello

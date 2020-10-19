@@ -16,7 +16,7 @@ import com.synthful.angst.model.Address;
 
 @Controller
 @RequestMapping("/duriangrove")
-public class DurianGroveMVController extends AAngsta {
+public class DurianGroveMVController implements AAngsta {
 
     @Inject
     private String season; // Inject static field into instance field
@@ -48,7 +48,7 @@ public class DurianGroveMVController extends AAngsta {
         model.addAttribute("where", where);
         model.addAttribute("what", season);
 
-        logger.info("anotherHandleRequest: {},{},{} ", who, where, season);
+        getLogger().info("anotherHandleRequest: {},{},{} ", who, where, season);
         return "Cello";
     }
 }

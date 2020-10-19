@@ -5,7 +5,7 @@ import java.util.List;
 
 import com.synthful.angst.common.AAngsta;
 
-public class Address extends AAngsta {
+public class Address implements AAngsta {
     final static public String NULL = null;
     final public String street;
     final public String city;

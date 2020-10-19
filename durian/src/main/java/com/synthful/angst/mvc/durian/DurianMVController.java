@@ -15,7 +15,7 @@ import com.synthful.angst.common.AAngsta;
 import com.synthful.angst.model.Address;
 
 @Controller
-public class DurianMVController extends AAngsta {
+public class DurianMVController implements AAngsta {
 
     final static public String SEASON = "Spring";
 
@@ -27,7 +27,7 @@ public class DurianMVController extends AAngsta {
     @Inject
     public void setWally(Wally wally) {
         this.wally = wally;
-        logger.info("mvc wally={}", wally);
+        getLogger().info("mvc wally={}", wally);
     }
 
     /**
@@ -45,7 +45,7 @@ public class DurianMVController extends AAngsta {
         StringBuilder selectOpts = generateSelectOptions(zipMap);
         model.addAttribute("zippers", selectOpts.toString());
 
-        logger.info("handleRequestJoyfully");
+        getLogger().info("handleRequestJoyfully");
         return "Hello";
     }
 

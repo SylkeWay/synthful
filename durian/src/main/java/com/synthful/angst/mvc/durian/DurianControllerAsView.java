@@ -13,14 +13,14 @@ import com.synthful.angst.common.AAngsta;
 
 @Controller
 @RequestMapping("/durianview")
-public class DurianControllerAsView extends AAngsta {
+public class DurianControllerAsView implements AAngsta {
 
     private String plantFruitName;
 
     @Value(value = "${plant.fruit.name}")
     private void setPlantFruitName(String plantFruitName) {
         this.plantFruitName = plantFruitName;
-        logger.info("plantFruitName 1:{}", plantFruitName);
+        getLogger().info("plantFruitName 1:{}", plantFruitName);
     }
 
     @Value(value = "${plant.fruit.type}")
@@ -43,8 +43,8 @@ public class DurianControllerAsView extends AAngsta {
     @ResponseBody
     public String requestHandler(ModelMap model) throws Exception {
 
-        logger.info("plantFruitName 2:{}", plantFruitName);
-        logger.info("plantFruitType:{}", plantFruitType);
+        getLogger().info("plantFruitName 2:{}", plantFruitName);
+        getLogger().info("plantFruitType:{}", plantFruitType);
         return view1Html;
     }
 }

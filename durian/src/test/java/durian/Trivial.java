@@ -6,14 +6,14 @@ import org.junit.Test;
 
 import com.synthful.angst.common.AAngsta;
 
-public class Trivial extends AAngsta {
+public class Trivial implements AAngsta{
 
-    @Test(expected = NullPointerException.class)
+    @Test (expected=NullPointerException.class)
     public void nullIterator() {
-        logger.info("Start");
-        for (String s : (List<String>) null) {
-            logger.info("String: {}", s);
+        getLogger().info("Start");
+        for (String s : (List<String>) null ) {
+            getLogger().info("String: {}", s);
         }
-        logger.info("End");
+        getLogger().info("End");
     }
 }

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import com.synthful.angst.common.AAngsta;
 
 @Service
-public class ScriptTemplates extends AAngsta {
+public class ScriptTemplates implements AAngsta {
 
     @Inject
     private String inquireFruitSQL;
@@ -17,9 +17,9 @@ public class ScriptTemplates extends AAngsta {
 
     @Value(value = "${fruit.name}")
     public void setNothing(String nothing) {
-        logger.info("fruit.name:{}", nothing);
-        logger.info("inquireFruitSQL:\n{}", inquireFruitSQL);
-        logger.info("fruitySASMacro:\n{}", fruitySASMacro);
+        getLogger().info("fruit.name:{}", nothing);
+        getLogger().info("inquireFruitSQL:\n{}", inquireFruitSQL);
+        getLogger().info("fruitySASMacro:\n{}", fruitySASMacro);
     }
 
 }

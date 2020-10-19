@@ -36,8 +36,8 @@ public class DurianMVController extends AAngsta {
      * @return
      * @throws Exception
      * 
-     *             Browser url: http://{hostname}:{port}/{context}/v/h1 e.g.,
-     *             http://localhost:8080/durian/v/h1
+     *                   Browser url: http://{hostname}:{port}/{context}/v/h1 e.g.,
+     *                   http://localhost:8080/durian/v/h1
      */
     @RequestMapping(value = "/h1", method = RequestMethod.GET)
     public String handleRequestJoyfully(ModelMap model) throws Exception {

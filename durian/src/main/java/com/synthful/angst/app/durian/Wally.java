@@ -5,14 +5,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class Wally {
 
-	final private String name = "Wally";
-	final private int value = 1000;
+    final private String name = "Wally";
+    final private int value = 1000;
 
-	public String getName() {
-		return name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public int getValue() {
-		return value;
-	}
+    public int getValue() {
+        return value;
+    }
 }

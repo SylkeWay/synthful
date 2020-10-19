@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans
-  xmlns="http://www.springframework.org/schema/beans"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:context="http://www.springframework.org/schema/context"
-  
+
   xsi:schemaLocation="
         http://www.springframework.org/schema/beans 
         http://www.springframework.org/schema/beans/spring-beans.xsd
@@ -11,42 +9,36 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd
         ">
-  <bean
-    class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+  <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
     <property name="location">
       <value>classpath:properties/a.properties</value>
     </property>
   </bean>
 
   <bean id="greeting" class="java.lang.String">
-    <constructor-arg type="java.lang.String"
-      value="#### Hello Bellow ####" />
+    <constructor-arg type="java.lang.String" value="#### Hello Bellow ####" />
   </bean>
 
   <bean id="message" class="com.synthful.angst.model.Message">
-    <constructor-arg type="java.lang.String"
-      value="Ayam den lapeh" />
+    <constructor-arg type="java.lang.String" value="Ayam den lapeh" />
   </bean>
   <bean id="suffixedMessage" class="com.synthful.angst.model.Message">
-    <constructor-arg type="java.lang.String"
-      value="Ayam den lapeh" />
-    <property name="suffix" value="Burung Tempua mencari sarang"/>
-  </bean>
-  
-  <bean id="hampdenBranch" class="com.synthful.angst.model.Branch">
-    <property name="manager" value="Sammy Davis"/>
-    <property name="id" value="666"/>
-    <property name="location" ref="hampdenME"/>
+    <constructor-arg type="java.lang.String" value="Ayam den lapeh" />
+    <property name="suffix" value="Burung Tempua mencari sarang" />
   </bean>
 
-  <bean id="hampdenME"
-    class="com.synthful.angst.model.Address">
+  <bean id="hampdenBranch" class="com.synthful.angst.model.Branch">
+    <property name="manager" value="Sammy Davis" />
+    <property name="id" value="666" />
+    <property name="location" ref="hampdenME" />
+  </bean>
+
+  <bean id="hampdenME" class="com.synthful.angst.model.Address">
     <constructor-arg type="java.lang.String" name="street" value="123 Main St" />
     <constructor-arg type="java.lang.String" name="city" value="Hampden" />
     <constructor-arg type="int" name="zip" value="4444" />
   </bean>
-  
-  <context:component-scan
-    base-package="com.synthful.angst.app.durian" />
+
+  <context:component-scan base-package="com.synthful.angst.app.durian" />
 
 </beans>

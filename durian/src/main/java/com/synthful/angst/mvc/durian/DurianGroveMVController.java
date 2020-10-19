@@ -30,16 +30,14 @@ public class DurianGroveMVController extends AAngsta {
      * @return
      * @throws Exception
      * 
-     *             Browser url: http://{hostname}:{port}/{context}/v/duriangrove/h2g2j
-     *             e.g.,
-     *             http://localhost:8080/durian/v/duriangrove/h2g2j?who=Annie&what=Waker&when=now
+     *                   Browser url:
+     *                   http://{hostname}:{port}/{context}/v/duriangrove/h2g2j
+     *                   e.g.,
+     *                   http://localhost:8080/durian/v/duriangrove/h2g2j?who=Annie&what=Waker&when=now
      */
     @RequestMapping(value = "/h2g2j", method = { RequestMethod.GET, RequestMethod.POST })
-    public String anotherHandleRequest(ModelMap model,
-            @RequestParam("who") String who,
-            @RequestParam("street") String street,
-            @RequestParam("zip") int zip)
-        throws Exception {
+    public String anotherHandleRequest(ModelMap model, @RequestParam("who") String who,
+            @RequestParam("street") String street, @RequestParam("zip") int zip) throws Exception {
 
         Address addr = zipMap.get(zip);
         String city = addr != null ? addr.city : "Walla Walla";

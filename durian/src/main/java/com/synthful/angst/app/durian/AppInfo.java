@@ -17,12 +17,16 @@ public class AppInfo extends AAngsta {
     private String wName;
     private int wValue;
 
-    @Inject private Branch hampdenBranch;
-    @Inject private String greeting;
-    @Inject Address hampdenME;
+    @Inject
+    private Branch hampdenBranch;
+    @Inject
+    private String greeting;
+    @Inject
+    Address hampdenME;
 
-    @Value(value = "${maxUsers}") String maxUsers;
-    
+    @Value(value = "${maxUsers}")
+    String maxUsers;
+
     public void setMessage(Message message) {
         this.message = message;
         logger.info("message={}", message);
@@ -32,7 +36,7 @@ public class AppInfo extends AAngsta {
     public void setWally(Wally wally) {
         this.wName = wally.getName();
         this.wValue = wally.getValue();
-        
+
         // logger will print injected values
         // since this class is instantiated
         logger.info("After instantiation of: {}", this);

@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans
-  xmlns="http://www.springframework.org/schema/beans"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:context="http://www.springframework.org/schema/context"
-  xmlns:util="http://www.springframework.org/schema/util"
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context" xmlns:util="http://www.springframework.org/schema/util"
 
   xsi:schemaLocation="
 		http://www.springframework.org/schema/beans 
@@ -16,8 +13,7 @@
         http://www.springframework.org/schema/util/spring-util.xsd
         ">
 
-  <bean id="viewResolver"
-    class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+  <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
     <property name="prefix">
       <value>/WEB-INF/views/</value>
     </property>
@@ -25,69 +21,66 @@
       <value>.jsp</value>
     </property>
   </bean>
-  
-  <context:property-placeholder location="classpath:properties/b.properties"/>
 
-  <util:constant id="season"
-    static-field="com.synthful.angst.mvc.durian.DurianMVController.SEASON" />
-    
-  <util:constant id="NULL"
-    static-field="com.synthful.angst.model.Address.NULL" />
-    
+  <context:property-placeholder location="classpath:properties/b.properties" />
+
+  <util:constant id="season" static-field="com.synthful.angst.mvc.durian.DurianMVController.SEASON" />
+
+  <util:constant id="NULL" static-field="com.synthful.angst.model.Address.NULL" />
+
   <util:map id="zipMap" key-type="java.lang.Integer" value-type="com.synthful.angst.model.Address">
     <entry key="1001">
       <bean class="com.synthful.angst.model.Address">
-        <constructor-arg index="0" ref="NULL"/>
-        <constructor-arg index="1" value="Hampden"/>
-        <constructor-arg index="2" type="int" value="1001"/>
+        <constructor-arg index="0" ref="NULL" />
+        <constructor-arg index="1" value="Hampden" />
+        <constructor-arg index="2" type="int" value="1001" />
       </bean>
     </entry>
     <entry key="1004">
       <bean class="com.synthful.angst.model.Address">
-        <constructor-arg name="street" ref="NULL"/>
-        <constructor-arg name="city" value="Amhearst"/>
-        <constructor-arg name="zip" type="int" value="1004"/>
+        <constructor-arg name="street" ref="NULL" />
+        <constructor-arg name="city" value="Amhearst" />
+        <constructor-arg name="zip" type="int" value="1004" />
       </bean>
     </entry>
     <entry key="3910">
       <bean class="com.synthful.angst.model.Address">
-        <constructor-arg name="street" ref="NULL"/>
-        <constructor-arg name="city" value="York Beach"/>
-        <constructor-arg name="zip" type="int" value="3910"/>
+        <constructor-arg name="street" ref="NULL" />
+        <constructor-arg name="city" value="York Beach" />
+        <constructor-arg name="zip" type="int" value="3910" />
       </bean>
     </entry>
     <entry key="4444">
       <bean class="com.synthful.angst.model.Address">
-        <constructor-arg name="street" ref="NULL"/>
-        <constructor-arg name="city" value="Hampden"/>
-        <constructor-arg name="zip" type="int" value="4444"/>
+        <constructor-arg name="street" ref="NULL" />
+        <constructor-arg name="city" value="Hampden" />
+        <constructor-arg name="zip" type="int" value="4444" />
       </bean>
     </entry>
     <entry key="63440">
       <bean class="com.synthful.angst.model.Address">
-        <constructor-arg name="street" ref="NULL"/>
-        <constructor-arg name="city" value="La Grange"/>
-        <constructor-arg name="zip" type="int" value="63440"/>
+        <constructor-arg name="street" ref="NULL" />
+        <constructor-arg name="city" value="La Grange" />
+        <constructor-arg name="zip" type="int" value="63440" />
       </bean>
     </entry>
     <entry key="97101">
       <bean class="com.synthful.angst.model.Address">
-        <constructor-arg name="street" ref="NULL"/>
-        <constructor-arg name="city" value="Amity"/>
-        <constructor-arg name="zip" type="int" value="97101"/>
+        <constructor-arg name="street" ref="NULL" />
+        <constructor-arg name="city" value="Amity" />
+        <constructor-arg name="zip" type="int" value="97101" />
       </bean>
     </entry>
     <entry key="98424">
       <bean class="com.synthful.angst.model.Address">
-        <constructor-arg name="street" ref="NULL"/>
-        <constructor-arg name="city" value="Tacoma"/>
-        <constructor-arg name="zip" type="int" value="98424"/>
+        <constructor-arg name="street" ref="NULL" />
+        <constructor-arg name="city" value="Tacoma" />
+        <constructor-arg name="zip" type="int" value="98424" />
       </bean>
     </entry>
 
   </util:map>
-    
-  <context:component-scan
-    base-package="com.synthful.angst.mvc.durian" />
+
+  <context:component-scan base-package="com.synthful.angst.mvc.durian" />
 
 </beans>

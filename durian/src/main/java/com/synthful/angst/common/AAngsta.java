@@ -4,6 +4,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 abstract public class AAngsta {
-	final protected Logger logger = LoggerFactory.getLogger(this.getClass());
+    final protected Logger logger = LoggerFactory.getLogger(this.getClass());
 
 }

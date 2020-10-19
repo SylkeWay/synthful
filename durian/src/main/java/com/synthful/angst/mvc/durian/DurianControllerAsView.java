@@ -16,30 +16,32 @@ import com.synthful.angst.common.AAngsta;
 public class DurianControllerAsView extends AAngsta {
 
     private String plantFruitName;
-    
+
     @Value(value = "${plant.fruit.name}")
     private void setPlantFruitName(String plantFruitName) {
         this.plantFruitName = plantFruitName;
         logger.info("plantFruitName 1:{}", plantFruitName);
     }
-    
+
     @Value(value = "${plant.fruit.type}")
     private String plantFruitType;
-    
-    @Inject private String view1Html;
-    
+
+    @Inject
+    private String view1Html;
+
     /**
      * 
      * @param model
      * @return
      * @throws Exception
      * 
-     *             Browser url: http://{hostname}:{port}/{context}/v/durianview/v1 e.g.,
-     *             http://localhost:8080/durian/v/durianview/v1
+     *                   Browser url:
+     *                   http://{hostname}:{port}/{context}/v/durianview/v1 e.g.,
+     *                   http://localhost:8080/durian/v/durianview/v1
      */
     @RequestMapping(value = "/v1", method = RequestMethod.GET)
     @ResponseBody
-    public String requestHandler (ModelMap model) throws Exception {
+    public String requestHandler(ModelMap model) throws Exception {
 
         logger.info("plantFruitName 2:{}", plantFruitName);
         logger.info("plantFruitType:{}", plantFruitType);
